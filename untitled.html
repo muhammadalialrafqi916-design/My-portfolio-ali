@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Muhammad Ali Al Rafqi</title>
+    <style>
+        /* Pengaturan Dasar & Latar Belakang Ungu */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #1a1226; /* Warna ungu gelap */
+            color: #f0ebf7; 
+            position: relative;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* --- ELEMEN GRAFIS ABSTRAK (CSS Shapes) --- */
+        .shape-circle-1 {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 250px;
+            height: 250px;
+            background: rgba(157, 78, 221, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .shape-circle-2 {
+            position: fixed;
+            bottom: -100px;
+            right: -100px;
+            width: 350px;
+            height: 350px;
+            background: rgba(114, 9, 183, 0.15);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .shape-box-1 {
+            position: absolute;
+            top: 40%;
+            right: 5%;
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border: 4px solid rgba(255, 0, 127, 0.2);
+            border-radius: 8px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+
+        .shape-box-2 {
+            position: absolute;
+            bottom: 15%;
+            left: 8%;
+            width: 40px;
+            height: 40px;
+            background: rgba(90, 24, 154, 0.3);
+            border-radius: 4px;
+            transform: rotate(15deg);
+            z-index: -1;
+        }
+
+        /* --- STRUKTUR KONTEN --- */
+        header { 
+            background: linear-gradient(135deg, #3c096c, #5a189a); 
+            color: #fff; 
+            padding: 40px 20px; 
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        h1 { margin: 0 0 10px; font-size: 2.5em; letter-spacing: 1px; }
+        h2 { border-bottom: 2px solid #7209b7; padding-bottom: 10px; margin-top: 30px; color: #c77dff; }
+        p { line-height: 1.6; }
+
+        .container { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            background: rgba(36, 0, 70, 0.6); 
+            padding: 30px; 
+            border-radius: 15px; 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .interests, .skills, .social-media { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        
+        /* Badge Standar */
+        .badge { 
+            background-color: #7209b7; 
+            color: #fff; 
+            padding: 8px 18px; 
+            border-radius: 20px; 
+            font-size: 0.9em; 
+            font-weight: 500;
+            border: 1px solid #9d4ede;
+            transition: 0.3s;
+        }
+        
+        .badge:hover {
+            background-color: #9d4ede;
+            transform: translateY(-2px);
+        }
+
+        /* Tombol TikTok Khusus berlatar Putih */
+        .tiktok-btn {
+            background-color: #ffffff;
+            color: #1a1226;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .tiktok-btn:hover {
+            background-color: #f0ebf7;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="shape-circle-1"></div>
+<div class="shape-circle-2"></div>
+<div class="shape-box-1"></div>
+<div class="shape-box-2"></div>
+
+<header>
+    <h1>Muhammad Ali Al Rafqi</h1>
+    <p>Junior High School Student & Tech Enthusiast</p>
+</header>
+
+<div class="container">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah seorang pelajar kelas 9 yang berbasis di Pekanbaru. Saya memiliki ketertarikan mendalam pada teknologi, optimasi sistem, desain grafis, serta eksplorasi kode web secara mandiri.</p>
+
+    <h2>Keahlian Dasar</h2>
+    <div class="skills">
+        <span class="badge">Desain Grafis</span>
+        <span class="badge">Video Editing</span>
+        <span class="badge">Pengembangan Web (HTML & CSS)</span>
+    </div>
+
+    <h2>Minat & Aktivitas</h2>
+    <div class="interests">
+        <span class="badge">Penjelajahan Luar Angkasa</span>
+        <span class="badge">Pengembangan Platform (Roblox)</span>
+        <span class="badge">Sains & Evolusi Biologi</span>
+        <span class="badge">Anime & Kreativitas Digital</span>
+    </div>
+
+    <h2>Media Sosial</h2>
+    <div class="social-media">
+        <a href="https://www.tiktok.com/@muhammadalialrafq?_r=1&_t=ZS-97yNz7dbrjp" target="_blank" class="tiktok-btn">
+            🎵 Ikuti saya di TikTok
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
