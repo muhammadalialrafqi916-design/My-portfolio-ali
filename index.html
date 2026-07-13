@@ -128,10 +128,125 @@
             background-color: #f0ebf7;
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
-        }
+        }     /* --- TAMBAHAN KODE BARU (NAVBAR, CONTACT, INFO GRID) --- */
+    
+    /* Navbar Atas */
+    .top-nav {
+        background-color: #ffe600; /* Kuning */
+        color: #000;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 2px 2px 0px #000;
+    }
+    .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    .nav-menu {
+        background: #fff;
+        border: 2px solid #000;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* Bagian Let's Connect */
+    .contact-section { margin-top: 50px; text-align: left; }
+    .contact-badge {
+        background: #ff6b9e;
+        color: #fff;
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+        border: 2px solid #000;
+    }
+    .contact-section h2 { border: none; margin-bottom: 5px; padding: 0; }
+    .contact-card {
+        background: #fff;
+        color: #000;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 20px;
+        border: 2px solid #000;
+        box-shadow: 4px 4px 0px #000;
+    }
+    .contact-card h3 { border: none; margin-top: 0; color: #000; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #000;
+        border-radius: 8px;
+        background-color: #fff8e1;
+        font-family: inherit;
+        box-sizing: border-box;
+    }
+    .submit-btn {
+        width: 100%;
+        background: #ff6b9e;
+        color: #fff;
+        border: 2px solid #000;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 2px 2px 0px #000;
+    }
+
+    /* Grid Biodata / Info Server */
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 30px;
+    }
+    .info-card {
+        padding: 15px;
+        border-radius: 10px;
+        border: 2px solid #000;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 3px 3px 0px #000;
+        text-align: left;
+    }
+    .info-card span.title { font-size: 0.8rem; margin-bottom: 5px; font-weight: bold; opacity: 0.8; }
+    .info-card strong { font-size: 0.9rem; word-break: break-all; }
+    
+    .card-red { background-color: #ff4d4d; }
+    .card-blue { background-color: #4da6ff; }
+    .card-green { background-color: #a6ff4d; }
+    .card-white { background-color: #ffffff; }
+
+    @media (max-width: 500px) {
+        .info-grid { grid-template-columns: 1fr; } /* Menyusun ke bawah jika layar HP kecil */
+    }
+
     </style>
 </head>
 <body>
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <span style="font-size: 1.5rem;">🖼️</span>
+            <span>Ali</span>
+        </div>
+        <button class="nav-menu">☰</button>
+    </nav>
 
 <div class="shape-circle-1"></div>
 <div class="shape-circle-2"></div>
@@ -175,6 +290,50 @@
     </a>
 
     </div>
+            <div class="contact-section">
+            <div class="contact-badge">04 // CONTACT</div>
+            <h2 style="color: #fff;">Let's Connect</h2>
+            <p style="color: #ccc;">Mau kolaborasi, ngobrol, atau just say hi? Gas aja!</p>
+
+            <div class="contact-card">
+                <h3>💬 Kirim Pesan</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Nama</label>
+                        <input type="text" placeholder="Nama kamu">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Pesan</label>
+                        <textarea placeholder="Tulis pesan kamu di sini..." rows="4"></textarea>
+                    </div>
+                    <button type="button" class="submit-btn">✈ KIRIM PESAN</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card card-red">
+                <span class="title">✉ Email</span>
+                <strong>@muhammadali.alrafqi916@gmail.com</strong>
+            </div>
+            <div class="info-card card-blue">
+                <span class="title">📍 Lokasi</span>
+                <strong>Palas, Pekanbaru, Indonesia</strong>
+            </div>
+            <div class="info-card card-green">
+                <span class="title">🕒 Response</span>
+                <strong>< 24 jam</strong>
+            </div>
+            <div class="info-card card-white">
+                <span class="title">❤️ Status Server</span>
+                <strong>Aktif</strong>
+            </div>
+        </div>
+
 </div>
 
 </body>
