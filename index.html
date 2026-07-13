@@ -295,24 +295,36 @@
             <h2 style="color: #fff;">Let's Connect</h2>
             <p style="color: #ccc;">Mau kolaborasi, ngobrol, atau just say hi? Gas aja!</p>
 
-            <div class="contact-card">
-                <h3>💬 Kirim Pesan</h3>
-                <form>
-                    <div class="form-group">
-                        <label>Nama</label>
-                        <input type="text" placeholder="Nama kamu">
-                    </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="email@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label>Pesan</label>
-                        <textarea placeholder="Tulis pesan kamu di sini..." rows="4"></textarea>
-                    </div>
-                    <button type="button" class="submit-btn">✈ KIRIM PESAN</button>
-                </form>
-            </div>
+                    <div class="contact-card">
+            <h3>💬 Kirim Pesan</h3>
+            
+            <!-- Form dihubungkan ke FormSubmit. target="_blank" agar membuka tab baru tanpa menutup webmu -->
+            <form action="https://formsubmit.co/muhammadali.alrafqi916@gmail.com" method="POST" target="_blank" onsubmit="alert('Pesan berhasil dikirim! ✅️\n\nCatatan: Jika ini pengiriman pertama, kamu harus mengaktifkannya dulu lewat pesan masuk di Gmail.');">
+                
+                <!-- Mematikan fitur Captcha yang ribet -->
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-group">
+                    <label>Nama</label>
+                    <!-- Tambahan name="nama" dan required (wajib diisi) -->
+                    <input type="text" name="nama" placeholder="Nama kamu" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <!-- Tambahan name="email" -->
+                    <input type="email" name="email" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Pesan</label>
+                    <!-- Tambahan name="pesan" -->
+                    <textarea name="pesan" placeholder="Tulis pesan kamu di sini..." rows="4" required></textarea>
+                </div>
+                
+                <!-- Tipe tombol diubah menjadi submit -->
+                <button type="submit" class="submit-btn">✈ KIRIM PESAN</button>
+            </form>
+        </div>
+
         </div>
 
         <div class="info-grid">
