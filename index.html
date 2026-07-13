@@ -236,6 +236,43 @@
     @media (max-width: 500px) {
         .info-grid { grid-template-columns: 1fr; } /* Menyusun ke bawah jika layar HP kecil */
     }
+/* --- CSS UNTUK MENU DROPDOWN --- */
+.menu-tersembunyi {
+    display: none; /* Sembunyikan dari awal */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Jarak dari atas, sesuaikan jika kurang pas */
+    right: 20px;
+    background-color: #fff; /* Warna background menu */
+    border: 3px solid #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px #1a1a1a; /* Gaya Neo-brutalism */
+    padding: 10px;
+    z-index: 999;
+    min-width: 200px;
+}
+
+/* Saat tombol diklik, class ini ditambahkan agar menu muncul */
+.menu-tersembunyi.tampil {
+    display: flex;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 700;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: #a3e635; /* Warna saat disentuh/hover */
+    border: 2px solid #1a1a1a;
+}
+/* --- AKHIR CSS MENU --- */
 
     </style>
 </head>
@@ -247,6 +284,12 @@
         </div>
         <button class="nav-menu">☰</button>
     </nav>
+    <div id="kotak-menu" class="menu-tersembunyi">
+    <a href="#tentang" class="menu-item">Tentang Saya</a>
+    <a href="#keahlian" class="menu-item">Keahlian Dasar</a>
+    <a href="#minat" class="menu-item">Minat & Aktivitas</a>
+</div>
+
 
 <div class="shape-circle-1"></div>
 <div class="shape-circle-2"></div>
@@ -259,17 +302,17 @@
 </header>
 
 <div class="container">
-    <h2>Tentang Saya</h2>
+    <h2 id="tentang">Tentang Saya</h2>
     <p>Saya adalah seorang pelajar kelas 10 yang berbasis di Pekanbaru. Saya memiliki ketertarikan mendalam pada teknologi, optimasi sistem, desain grafis, serta eksplorasi kode web secara mandiri.</p>
 
-    <h2>Keahlian Dasar</h2>
+    <h2 id="Keahlian">Keahlian Dasar</h2>
     <div class="skills">
         <span class="badge">Desain Grafis</span>
         <span class="badge">Video Editing</span>
         <span class="badge">Pengembangan Web (HTML & CSS)</span>
     </div>
 
-    <h2>Minat & Aktivitas</h2>
+    <h2 id="Minat">Minat & Aktivitas</h2>
     <div class="interests">
         <span class="badge">Penjelajahan Luar Angkasa</span>
         <span class="badge">Pengembangan Platform (Roblox)</span>
@@ -347,6 +390,24 @@
         </div>
 
 </div>
+
+                    <script>
+    const tombolMenu = document.querySelector('.nav-menu');
+    const kotakMenu = document.getElementById('kotak-menu');
+
+    // Saat tombol diklik, munculkan atau hilangkan menu
+    tombolMenu.addEventListener('click', function(e) {
+        kotakMenu.classList.toggle('tampil');
+        e.stopPropagation(); // Mencegah klik bocor
+    });
+
+    // Menutup menu jika user mengklik di luar kotak menu
+    document.addEventListener('click', function(e) {
+        if (!kotakMenu.contains(e.target) && !tombolMenu.contains(e.target)) {
+            kotakMenu.classList.remove('tampil');
+        }
+    });
+</script>
 
 </body>
 </html>
