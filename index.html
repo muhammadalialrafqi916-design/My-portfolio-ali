@@ -273,6 +273,120 @@
     border: 2px solid #1a1a1a;
 }
 /* --- AKHIR CSS MENU --- */
+/* ==================== CSS FOOTER PINK GAYA UPTODOWN ==================== */
+.footer-pink {
+    background-color: #ff66b2; /* Warna pink cerah yang kuat */
+    border-top: 4px solid #1a1a1a; /* Garis pembatas tebal gaya neo-brutalist */
+    padding: 50px 20px;
+    margin-top: 60px;
+    color: #1a1a1a;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-about {
+    flex: 1.5;
+    min-width: 280px;
+}
+
+.footer-about h3 {
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-about p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.footer-about .copyright {
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.footer-socials {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-socials h4 {
+    font-size: 18px;
+    font-weight: 850;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.social-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-sosmed {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    padding: 12px 18px;
+    border: 3px solid #1a1a1a;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    width: fit-content;
+    min-width: 180px;
+    box-shadow: 4px 4px 0px #1a1a1a;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-sosmed svg {
+    flex-shrink: 0;
+}
+
+/* Efek Gerak & Bayangan Khas Saat Tombol Disentuh (Hover) */
+.btn-sosmed:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px #1a1a1a;
+}
+
+/* Warna Hover Khusus Masing-Masing Sosmed */
+.btn-sosmed.instagram:hover {
+    background-color: #fccc63; /* Kuning-oranye Instagram */
+}
+
+.btn-sosmed.tiktok:hover {
+    background-color: #00f2fe; /* Biru Neon TikTok */
+}
+
+.btn-sosmed.youtube:hover {
+    background-color: #ff0000; /* Merah YouTube */
+    color: #ffffff;
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: left;
+    }
+    .btn-sosmed {
+        width: 100%; /* Tombol melebar penuh di HP agar mudah diklik */
+    }
+}
 
     </style>
 </head>
